@@ -1,43 +1,53 @@
-# Business — Generative Engine Optimization Map
+# זמני שבת  — Generative Engine Optimization Map
+
+> A שירותים דתיים ויהדות business.
 
 ---
 
 ## Pages
 
 ### Home
-https://example.com
+https://shabbat-times.zappy5.app
 
 ### About
-https://example.com/about
+https://shabbat-times.zappy5.app/about
 
 ### Services
-https://example.com/services
+https://shabbat-times.zappy5.app/services
 
 ### Contact
-https://example.com/contact
+https://shabbat-times.zappy5.app/contact
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://shabbat-times.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://shabbat-times.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://shabbat-times.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About זמני שבת 
+זמני שבת  is a business in the שירותים דתיים ויהדות industry.
+
+## Target Audience
+קהילה יהודית שומרת שבת
+
+## Industry
+שירותים דתיים ויהדות
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://shabbat-times.zappy5.app/sitemap.xml
+- **Robots.txt**: https://shabbat-times.zappy5.app/robots.txt
