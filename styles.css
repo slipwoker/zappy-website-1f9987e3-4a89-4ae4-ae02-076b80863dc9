@@ -5600,6 +5600,311 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* Added Component Styles */
+.shabbat-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  height: 80vh;
+  max-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--primary);
+}
+
+.shabbat-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.shabbat-hero-bg:hover {
+  transform: scale(1.02);
+}
+
+.shabbat-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 42, 68, 0.7) 0%,
+    rgba(30, 42, 68, 0.85) 50%,
+    rgba(30, 42, 68, 0.9) 100%
+  );
+  z-index: 2;
+}
+
+.shabbat-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  text-align: center;
+  direction: rtl;
+}
+
+.shabbat-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.shabbat-hero-title {
+  font-family: 'Frank Ruhl Libre', Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px 0;
+  line-height: 1.2;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.shabbat-hero-subtitle {
+  font-family: 'Frank Ruhl Libre', Georgia, serif;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  color: #f5f5f5;
+  margin: 0 0 48px 0;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shabbat-hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.shabbat-btn {
+  font-family: 'Frank Ruhl Libre', Georgia, serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.shabbat-btn-primary {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.shabbat-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shabbat-btn-primary:hover::before {
+  opacity: 1;
+}
+
+.shabbat-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(199, 154, 58, 0.4);
+}
+
+.shabbat-btn-primary:active {
+  transform: translateY(0);
+}
+
+.shabbat-btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.shabbat-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.shabbat-btn-secondary:active {
+  transform: translateY(0);
+}
+
+.shabbat-btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.shabbat-btn-primary:hover .shabbat-btn-icon {
+  transform: translateX(-4px);
+}
+
+.shabbat-hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  animation: bounce 2s infinite;
+}
+
+.shabbat-scroll-indicator {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shabbat-scroll-indicator:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(4px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .shabbat-hero-section {
+    min-height: 500px;
+    height: 70vh;
+  }
+
+  .shabbat-hero-title {
+    margin-bottom: 16px;
+  }
+
+  .shabbat-hero-subtitle {
+    margin-bottom: 32px;
+  }
+
+  .shabbat-hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .shabbat-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+
+  .shabbat-hero-scroll {
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shabbat-hero-section {
+    min-height: 450px;
+  }
+
+  .shabbat-hero-content {
+    padding: 0 16px;
+  }
+
+  .shabbat-btn {
+    padding: 12px 20px;
+    font-size: 0.938rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .shabbat-hero-container,
+  .shabbat-hero-scroll,
+  .shabbat-btn,
+  .shabbat-hero-bg {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .shabbat-hero-overlay {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  .shabbat-btn-secondary {
+    border-width: 3px;
+  }
+}
+
+/* Focus styles for accessibility */
+.shabbat-btn:focus-visible {
+  outline: 3px solid #C79A3A;
+  outline-offset: 4px;
+}
+
+.shabbat-scroll-indicator:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
